@@ -41,9 +41,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Build and Push
-      uses: docker/build-push-action@v3
+      uses: docker/build-push-action@v3  # Perbaikan di sini
       with:
         push: true
         tags: riska04/medcare_kelompok12:latest
-        context: ./docker  # Jika Dockerfile ada dalam folder docker
-        file: ./docker/Dockerfile  # Jika Dockerfile ada dalam folder docker
